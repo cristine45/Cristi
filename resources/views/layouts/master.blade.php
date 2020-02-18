@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container">
         <div class="navbar-header">
-           <a class="navbar-brand" href="#">Project name</a>
+           <a class="navbar-brand" href="http://localhost/Cristi/public/">Trucks</a>
         </div>
         <div class="links">
           <a href="https://laravel.com/docs">Docs</a>
