@@ -15,5 +15,6 @@ use App\Http\Controllers\IndexControler;
 
 Route::get('/', 'IndexControler@index' );
 Route::get('/p1', 'IndexControler@p1' );
+Route::get('article/{id}', 'IndexControler@show') ->name('articleShow');
 
 ?>
