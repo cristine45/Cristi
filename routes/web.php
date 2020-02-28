@@ -13,9 +13,12 @@
 
 use App\Http\Controllers\IndexControler;
 
-Route::get('/', 'IndexControler@index' );
-Route::get('/p1', 'IndexControler@p1' );
-Route::get('article/{id}', 'IndexControler@show') ->name('articleShow');
+Route::get('/', 'IndexControler@index');
+Route::get('/p1', 'IndexControler@p1');
+Route::get('article/{id}', 'IndexControler@show')->name('articleShow');
 Route::get('page/add', 'IndexControler@add');
-Route:: post('page/add', 'IndexControler@store')-> name('articleStore');
-?>
+Route::post('page/add', 'IndexControler@store')->name('articleStore');
+Route::delete('page/delete/{article}', function(\App\Article $article){
+    $article->delete();
+    return redirect('/');
+})->name('articleDelete');

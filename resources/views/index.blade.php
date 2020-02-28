@@ -24,6 +24,11 @@
         <p>{{$article->description}}</p>
         
         <p><a class="btn btn-secondary" href="{{route('articleShow', ['id'=>$article->id]) }}" role="button">View details &raquo;</a></p>
+        <form action="{{route('articleDelete', ['article'=>$article->id])}}" method="post">
+        {{method_field('delete')}}
+        @csrf
+        <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
       </div>@endforeach
       <hr>
     </div>  
