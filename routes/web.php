@@ -22,3 +22,4 @@ Route::delete('page/delete/{article}', function(\App\Article $article){
     $article->delete();
     return redirect('/');
 })->name('articleDelete');
+Route::resource('articles', 'ArticleController');
